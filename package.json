@@ -1,6 +1,6 @@
 {
 	"name": "@intenda/opus-ui-code-editor",
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"type": "module",
 	"files": [
 		"dist"

@@ -31,7 +31,7 @@ export default defineConfig(configEnv => ({
   build: {
     lib: {
       entry: resolve('src', 'library.js'),
-      name: 'opus-ui-code-editor',
+      name: '@intenda/opus-ui-code-editor',
       formats: ['es'],
       fileName: () => `lib.js`,
     },
