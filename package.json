@@ -1,6 +1,6 @@
 {
 	"name": "@intenda/opus-ui-code-editor",
-	"version": "0.5.1",
+	"version": "0.5.2",
 	"type": "module",
 	"files": [
 		"dist"
@@ -11,6 +11,15 @@
 		},
 		"./dist/style.css": "./dist/style.css"
 	},
+	"keywords": [
+		"opus-ui",
+		"code-editor",
+		"syntax",
+		"highlighting",
+		"code",
+		"editor",
+		"opus"
+	],
 	"main": "./dist/lib.js",
 	"scripts": {
 		"dev": "vite",
