@@ -36,6 +36,9 @@ export default defineConfig(configEnv => ({
       fileName: () => `lib.js`,
     },
     rollupOptions: {
+      output: {
+        assetFileNames: 'lspconfig.json',
+      },
       external: [...Object.keys(packageJson.peerDependencies)],
     },
   },
