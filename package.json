@@ -1,6 +1,6 @@
 {
 	"name": "@intenda/opus-ui-code-editor",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "module",
 	"homepage": "https://opus-ui.com",
 	"files": [
@@ -46,7 +46,7 @@
 		"vite-plugin-libcss": "^1.1.1"
 	},
 	"peerDependencies": {
-		"@intenda/opus-ui": ">=1.0.0 <= 2.0.0",
+		"@intenda/opus-ui": ">=1.0.0 < 2.0.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
