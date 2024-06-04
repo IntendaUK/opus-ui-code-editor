@@ -10,22 +10,26 @@ import path from 'path';
 import glob from 'glob';
 
 const customCopyPlugin = () => {
-  return {
-    name: 'custom-copy-plugin',
-    writeBundle: async () => {
-      const filesToCopy = glob.sync('src/components/**/system.json');
-      const distDir = 'dist/components';
+	return {
+		name: 'custom-copy-plugin',
+		writeBundle: async () => {
+			const copyFiles = async (srcDir, distDir, globPattern) => {
+				const filesToCopy = glob.sync(globPattern);
 
-      await Promise.all(filesToCopy.map(async file => {
-        const relativePath = path.relative('src/components', file);
-        const destPath = path.join(distDir, relativePath);
+				await Promise.all(filesToCopy.map(async file => {
+					const relativePath = path.relative(srcDir, file);
+					const destPath = path.join(distDir, relativePath);
 
-        await fs.mkdir(path.dirname(destPath), { recursive: true });
+					await fs.mkdir(path.dirname(destPath), { recursive: true });
 
-        await fs.copyFile(file, destPath.replace('/', '\\'));
-      }));
-    }
-  };
+					await fs.copyFile(file, destPath.replace('/', '\\'));
+				}));
+			};
+
+			await copyFiles('src/components', 'dist/components', 'src/components/**/system.json');
+			await copyFiles('', 'dist', 'lspconfig.json');
+		}
+	};
 }
 
 export default defineConfig(() => ({
@@ -60,9 +64,6 @@ export default defineConfig(() => ({
 			fileName: () => `lib.js`,
 		},
 		rollupOptions: {
-			output: {
-				assetFileNames: 'lspconfig.json',
-			},
 			external: [...Object.keys(packageJson.peerDependencies)],
 		},
 	},
