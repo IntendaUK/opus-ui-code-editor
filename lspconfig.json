@@ -2,7 +2,7 @@
 	"components": [
 		{
 			"name": "codeEditor",
-			"path": "src/components/codeEditor"
+			"path": "dist/components/codeEditor"
 		}
 	]
 }

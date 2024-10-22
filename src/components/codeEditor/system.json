@@ -1,6 +1,6 @@
 {
     "propSpecConfig": {
-        "path": "src/components/codeEditor/props.js",
+        "path": "dist/components/codeEditor/props.js",
         "functions": [],
         "dependents": []
     }
