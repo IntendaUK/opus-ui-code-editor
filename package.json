@@ -1,6 +1,6 @@
 {
 	"name": "@intenda/opus-ui-code-editor",
-	"version": "1.1.2",
+	"version": "2.0.0",
 	"type": "module",
 	"homepage": "https://opus-ui.com",
 	"files": [
@@ -31,24 +31,24 @@
 	},
 	"dependencies": {
 		"prismjs": "^1.29.0",
-		"react-simple-code-editor": "^0.13.1"
+		"react-simple-code-editor": "^0.14.1"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.55",
-		"@types/react-dom": "^18.2.19",
-		"@vitejs/plugin-react": "^4.2.1",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react": "^4.3.4",
 		"babel-plugin-prismjs": "^2.1.0",
-		"eslint": "^8.56.0",
-		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-react-refresh": "^0.4.5",
-		"vite": "^5.1.0",
+		"eslint": "^9.20.1",
+		"eslint-plugin-react": "^7.37.4",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"vite": "^6.1.1",
 		"vite-plugin-libcss": "^1.1.1"
 	},
 	"peerDependencies": {
-		"@intenda/opus-ui": ">=1.0.0 < 2.0.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"@intenda/opus-ui": ">=2.0.0 < 3.0.0",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4"
 	},
 	"publishConfig": {
 		"access": "public"
