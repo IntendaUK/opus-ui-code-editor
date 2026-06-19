@@ -10,7 +10,24 @@ import Editor from './simpleEditor';
 //Plugins
 import prism from 'prismjs';
 import { highlight, languages } from 'prismjs/components/prism-core';
+import 'prismjs/components/prism-json';
 import 'prismjs/themes/prism.css';
+
+const escapeHtml = code => code
+	.replace(/&/g, '&amp;')
+	.replace(/</g, '&lt;')
+	.replace(/>/g, '&gt;');
+
+// Highlight with the requested grammar; fall back to escaped plain text for any
+// language whose grammar isn't registered (avoids Prism's "no grammar" throw).
+const highlightCode = (code, language) => {
+	const grammar = languages[language] || languages.json;
+
+	if (!grammar)
+		return escapeHtml(code);
+
+	return highlight(code, grammar, language || 'json');
+};
 
 //Styles
 import './styles.css';
@@ -72,7 +89,7 @@ export const CodeEditor = props => {
 					padding={0}
 					insertSpaces={false}
 					tabSize={1}
-					highlight={code => highlight(code, languages[language])}
+					highlight={code => highlightCode(code, language)}
 					onValueChange={handlerOnValueChange}
 					style={styleEditor}
 				/>
