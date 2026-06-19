@@ -10,6 +10,11 @@ import Editor from './simpleEditor';
 //Plugins
 import prism from 'prismjs';
 import { highlight, languages } from 'prismjs/components/prism-core';
+// Grammars (order matters: dependencies before dependents). jsx needs markup + javascript (+ clike).
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-json';
 import 'prismjs/themes/prism.css';
 
