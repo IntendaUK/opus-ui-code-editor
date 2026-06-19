@@ -4,9 +4,10 @@ import React, { useEffect } from 'react';
 //System
 import { createContext } from '@intenda/opus-ui';
 
-//Plugins
-import Editor from 'react-simple-code-editor';
+//Components
+import Editor from './simpleEditor';
 
+//Plugins
 import prism from 'prismjs';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/themes/prism.css';

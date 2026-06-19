@@ -1,6 +1,6 @@
 {
 	"name": "@intenda/opus-ui-code-editor",
-	"version": "3.0.2",
+	"version": "3.1.0",
 	"type": "module",
 	"homepage": "https://opus-ui.com",
 	"files": [
@@ -30,8 +30,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"prismjs": "^1.29.0",
-		"react-simple-code-editor": "^0.14.1"
+		"prismjs": "^1.29.0"
 	},
 	"devDependencies": {
 		"@types/react": "^19.0.10",
